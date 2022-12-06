@@ -13,7 +13,7 @@ class Sierpinski:
         self.edges = [Point(0, 0), Point(sideSize/2, height), Point(sideSize, 0)]
 
     def generatePoints(self, iterations=1000):
-        self.__plotPoints = self.edges
+        self.__plotPoints = self.edges.copy()
         for _ in range(iterations):
             randomPoint = random.choice(self.__plotPoints)
             randomEdge = random.choice(self.edges)
